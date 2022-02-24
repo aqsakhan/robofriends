@@ -3,6 +3,7 @@ import './App.css';
 import CardList from "../Components/CardList";
 import Search from "../Components/Search.js";
 import Scroll from "../Components/Scroll.js";
+import ErrorBoundry from "../Components/ErrorBoundry";
 // import { robots } from './robots.js'; // if not fetching from the url use this file
 
 
@@ -40,7 +41,9 @@ class App extends Component {
                 <h1 className="f1 ttu">RoboFriends</h1>
                 <Search searchChange={ this.onSearchChange }/>
                 <Scroll>
-                    <CardList robots={ filteredRobots }/>
+                    <ErrorBoundry>
+                        <CardList robots={ filteredRobots }/>
+                    </ErrorBoundry>
                 </Scroll>
             </div>
         );
