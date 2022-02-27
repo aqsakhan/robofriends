@@ -37,16 +37,16 @@ class App extends Component {
             return <h1 className="f1 tc">Loading...</h1>
         } else {
             return (
-            <div className="tc">
-                <h1 className="f1 ttu">RoboFriends</h1>
-                <Search searchChange={ this.onSearchChange }/>
-                <Scroll>
-                    <ErrorBoundry>
-                        <CardList robots={ filteredRobots }/>
-                    </ErrorBoundry>
-                </Scroll>
-            </div>
-        );
+                <div className="tc">
+                    <h1 className="f1 ttu">RoboFriends</h1>
+                    <Search searchChange={ this.onSearchChange }/>
+                    <Scroll>
+                        <ErrorBoundry>
+                            <CardList robots={ filteredRobots }/>
+                        </ErrorBoundry>
+                    </Scroll>
+                </div>
+            );
         }
     }
 }
